@@ -22,11 +22,19 @@ if user_input:
     if not matches.empty:
         st.write(f"Found {len(matches)} result(s):")
         for _, row in matches.iterrows():
-            st.subheader(row['title'])
+            # 📺 Title with Year in (YYYY) format
+            title_with_year = f"{row['title']} ({int(row['release_year'])})"
+            st.subheader(title_with_year)
 
-            st.markdown(f"**Year:** {row['release_year']}")
+            # 📽️ Type and Rating on same line, plain text
+            media_type = row.get('type', 'Unknown')
+            rating = row.get('rating', 'Not Rated')
+            st.markdown(
+                f"<span style='font-weight:bold;'>Type:</span> {media_type}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-weight:bold;'>Rating:</span> {rating}",
+                unsafe_allow_html=True
+            )
 
-            # Get available genres
+            # 🎭 Genres
             genres = [
                 row.get('Genre split 1', ''),
                 row.get('Genre split 2', ''),
