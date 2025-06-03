@@ -39,7 +39,7 @@ st.markdown(
 
         /* Make body text larger */
         p, ul, ol {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             line-height: 1.6;
         }
 
