@@ -44,14 +44,14 @@ st.markdown(
         }
 
          /* Make the search input box taller */
-        input[type="text"] {
-            height: 3rem !important;
+        section[data-testid="stTextInput"] input {
+            height: 4rem !important;
             font-size: 1.1rem !important;
-            line-height: 4rem !important;  /* This centers the text vertically */
+            line-height: 4rem !important;
             padding: 0 1rem !important;
             border: 1px solid #ccc !important;
             border-radius: 6px !important;
-
+            box-shadow: none !important;
         }
 
     </style>
