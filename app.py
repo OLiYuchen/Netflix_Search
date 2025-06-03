@@ -45,9 +45,9 @@ st.markdown(
 
          /* Make the search input box taller */
         section[data-testid="stTextInput"] input {
-            height: 4rem !important;
+            height: 5rem !important;
             font-size: 1.1rem !important;
-            line-height: 4rem !important;
+            line-height: 5rem !important;
             padding: 0 1rem !important;
             border: 1px solid #ccc !important;
             border-radius: 6px !important;
