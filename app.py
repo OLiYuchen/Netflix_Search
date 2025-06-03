@@ -45,9 +45,13 @@ st.markdown(
 
          /* Make the search input box taller */
         input[type="text"] {
-            height: 4rem !important;
-            font-size: 1.3rem !important;
+            height: 3rem !important;
+            font-size: 1.1rem !important;
             padding: 0.5rem 1rem !important;
+            border: 1px solid #ccc !important;
+            border-radius: 6px !important;
+            box-shadow: none !important;
+        }
 
     </style>
     """,
@@ -124,11 +128,11 @@ if st.session_state.page == "home":
 # 📈 Visualization Image Page
 elif st.session_state.page == "visual1":
     st.markdown("### Genre Count by Rating")
-    st.image("Genrerate.png", caption="Genre Count by Rating Visualization", use_column_width=True)
+    st.image("Genrerate.png", caption="Genre Count by Rating Visualization", use_container_width=True)
 
 elif st.session_state.page == "visual2":
     st.markdown("### Most Common Genre by Release Year")
-    st.image("Most Common.png", caption="Genre Distribution Visualization", use_column_width=True)
+    st.image("Most Common.png", caption="Genre Distribution Visualization", use_container_width=True)
     
 
 # 📉 Tableau Dashboard Page
