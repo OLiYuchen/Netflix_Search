@@ -132,18 +132,19 @@ if st.session_state.page == "home":
 # 📈 Visualization Image Page
 elif st.session_state.page == "visual1":
     st.markdown("### Genre Count by Rating")
+    st.markdown("This dual heatmap shows the distribution of Netflix content genres by MPAA rating. The left panel displays genres starting with A–M, and the right panel covers N–Z. Darker blue cells represent a higher count of titles within a specific genre and rating combination. This visualization helps identify which content ratings are most common across various genres—such as the concentration of TV-MA ratings in Dramas and Documentaries.")
     st.image("Generate split.png", caption="Genre Count by Rating Visualization", use_container_width=True)
 
 elif st.session_state.page == "visual2":
     st.markdown("### Most Common Genre by Release Year")
+    st.markdown("This bar chart illustrates the most common Netflix content genre by release year, from 1990 onward. Each bar represents a single year, colored by the genre that appeared most frequently in that year. The chart shows a sharp rise in total content after 2010, with International Movies dominating much of the mid-2010s. By 2021—the final year in our dataset—we see a shift toward International TV Shows as the leading genre. This visualization reveals long-term trends and changes in global content production on Netflix")
     st.image("Most Common.png", caption="Genre Distribution Visualization", use_container_width=True)
     
 
 # 📉 Tableau Dashboard Page
 elif st.session_state.page == "tableau1":
     st.markdown("### Interactive Tableau Dashboard -- Country Filter")
-    st.markdown(" ")
-
+    st.markdown("As seen previously in the Ratings Dashboard, the United States, India, and the United Kingdom dominate when it comes to the number of titles on Netflix by country. The Country Filter Dashboard allows users to see what the distribution of titles released by country might look like when one or more of these major contributing countries are removed from the dataset. ")
     st.markdown("""
         <iframe src="https://public.tableau.com/views/CountryFilter_17491093823300/CountryFilterDashboard?:embed=y&:display_count=yes&:showVizHome=no"
         width="100%" height="700" frameborder="0" allowfullscreen></iframe>
@@ -152,7 +153,8 @@ elif st.session_state.page == "tableau1":
 # 📉 Tableau Dashboard Page
 elif st.session_state.page == "tableau2":
     st.markdown("### Interactive Tableau Dashboard -- Rating Filter")
-    st.markdown(" ")
+    st.markdown("The first dashboard is the Rating Dashboard, which allows users to view the total number of titles on Netflix from each country and view a detailed breakdown of how many of those titles are movies vs. TV shows as well as how many titles have each MPAA rating. Users are also able to filter the map to only view certain ratings using the selection meny on the right side. ")
+
 
     st.markdown("""
         <iframe src="https://public.tableau.com/views/FINALWORKINGDataFlix/RatingDashboard?:embed=y&:display_count=yes&:showVizHome=no"
