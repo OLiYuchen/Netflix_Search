@@ -32,10 +32,7 @@ st.markdown(
             background-color: #f0f2f6;
         }
 
-        /* Make the label above the input box larger */
-        div[data-testid="stTextInput"] label {
-            font-size: 5.3rem !important;
-            font-weight: 600 !important;
+
         }
 
         /* Make body text larger */
@@ -49,7 +46,7 @@ st.markdown(
             height: 5rem !important;
             font-size: 1.1rem !important;
             line-height: 5rem !important;
-            padding: 0 1rem !important;
+            padding: 0 0rem !important;
             border: 1px solid #ccc !important;
             border-radius: 6px !important;
             box-shadow: none !important;
