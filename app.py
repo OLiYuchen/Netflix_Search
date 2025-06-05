@@ -132,7 +132,7 @@ if st.session_state.page == "home":
 # 📈 Visualization Image Page
 elif st.session_state.page == "visual1":
     st.markdown("### Genre Count by Rating")
-    st.image("Genrerate split.png", caption="Genre Count by Rating Visualization", use_container_width=True)
+    st.image("Generate split.png", caption="Genre Count by Rating Visualization", use_container_width=True)
 
 elif st.session_state.page == "visual2":
     st.markdown("### Most Common Genre by Release Year")
