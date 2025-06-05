@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
-import streamlit.components.v1 as components
+
 
 # Set custom page width with CSS
 st.markdown(
@@ -75,10 +75,10 @@ if st.sidebar.button("🏠 Home / Introduction"):
     st.session_state.page = "home"
 if st.sidebar.button("🔍 Search Page"):
     st.session_state.page = "search"
-if st.sidebar.button("📈 Tableau - Country Filter"):
-    st.session_state.page = "tableau1"
 if st.sidebar.button("📈 Tableau - Rating Filter"):
     st.session_state.page = "tableau2"
+if st.sidebar.button("📈 Tableau - Country Filter"):
+    st.session_state.page = "tableau1"
 if st.sidebar.button("📊 Genre Count by Rating"):
     st.session_state.page = "visual1"
 if st.sidebar.button("📊 Most Common Genre"):
