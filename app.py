@@ -167,7 +167,10 @@ elif st.session_state.page == "tableau2":
 # 🔍 Search Page
 else:
     df = load_data()
-
+    st.markdown("""
+    Use the search box below to quickly find a movie or TV show by its title!  
+    Simply begin typing a letter or word — enter for results.
+    """)
     user_input = st.text_input("", placeholder="Search for a movie or show title")
     if user_input:
         matches = df[df['title'].str.lower().str.startswith(user_input.lower())]
