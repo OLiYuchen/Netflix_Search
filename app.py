@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+import streamlit.components.v1 as components
 
 # Set custom page width with CSS
 st.markdown(
@@ -74,8 +75,10 @@ if st.sidebar.button("🏠 Home / Introduction"):
     st.session_state.page = "home"
 if st.sidebar.button("🔍 Search Page"):
     st.session_state.page = "search"
-if st.sidebar.button("📈 Tableau Dashboard"):
-    st.session_state.page = "tableau"
+if st.sidebar.button("📈 Tableau - Country Filter"):
+    st.session_state.page = "tableau1"
+if st.sidebar.button("📈 Tableau - Rating Filter"):
+    st.session_state.page = "tableau2"
 if st.sidebar.button("📊 Genre Count by Rating"):
     st.session_state.page = "visual1"
 if st.sidebar.button("📊 Most Common Genre"):
@@ -137,14 +140,25 @@ elif st.session_state.page == "visual2":
     
 
 # 📉 Tableau Dashboard Page
-elif st.session_state.page == "tableau":
-    st.markdown("### Interactive Tableau Dashboard")
+elif st.session_state.page == "tableau1":
+    st.markdown("### Interactive Tableau Dashboard -- Country Filter")
+    st.markdown(" ")
+
+    st.markdown("""
+        <iframe src="https://public.tableau.com/views/CountryFilter_17491093823300/CountryFilterDashboard?:embed=y&:display_count=yes&:showVizHome=no"
+        width="100%" height="700" frameborder="0" allowfullscreen></iframe>
+    """, unsafe_allow_html=True)
+
+# 📉 Tableau Dashboard Page
+elif st.session_state.page == "tableau2":
+    st.markdown("### Interactive Tableau Dashboard -- Rating Filter")
     st.markdown(" ")
 
     st.markdown("""
         <iframe src="https://public.tableau.com/views/FINALWORKINGDataFlix/RatingDashboard?:embed=y&:display_count=yes&:showVizHome=no"
         width="100%" height="700" frameborder="0" allowfullscreen></iframe>
     """, unsafe_allow_html=True)
+
 
 # 🔍 Search Page
 else:
