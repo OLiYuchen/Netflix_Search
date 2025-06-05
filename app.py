@@ -133,11 +133,13 @@ if st.session_state.page == "home":
 elif st.session_state.page == "visual1":
     st.markdown("### Genre Count by Rating")
     st.markdown("This dual heatmap shows the distribution of Netflix content genres by MPAA rating. The left panel displays genres starting with A–M, and the right panel covers N–Z. Darker blue cells represent a higher count of titles within a specific genre and rating combination. This visualization helps identify which content ratings are most common across various genres—such as the concentration of TV-MA ratings in Dramas and Documentaries.")
+    st.markdown(" ")
     st.image("Generate split.png", caption="Genre Count by Rating Visualization", use_container_width=True)
 
 elif st.session_state.page == "visual2":
     st.markdown("### Most Common Genre by Release Year")
     st.markdown("This bar chart illustrates the most common Netflix content genre by release year, from 1990 onward. Each bar represents a single year, colored by the genre that appeared most frequently in that year. The chart shows a sharp rise in total content after 2010, with International Movies dominating much of the mid-2010s. By 2021—the final year in our dataset—we see a shift toward International TV Shows as the leading genre. This visualization reveals long-term trends and changes in global content production on Netflix")
+    st.markdown(" ")
     st.image("Most Common.png", caption="Genre Distribution Visualization", use_container_width=True)
     
 
